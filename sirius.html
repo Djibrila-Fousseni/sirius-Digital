@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sirius Digital</title>
+
+<!-- Tailwind CSS (Play CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'bleu-fonce': '#03035A',
+          'bleu': '#054ACB',
+          'bleu-clair': '#2878E8',
+          'gris': '#666666',
+          'gris-clair': '#f4f7fc',
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Icônes Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: Arial, Helvetica, sans-serif; }
+</style>
+</head>
+
+<body class="text-[#28292F] bg-white leading-relaxed">
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-[1000] flex items-center justify-between px-[6%] py-3 min-h-[80px] bg-white shadow-[0_3px_15px_rgba(3,3,90,0.08)]">
+
+        <div class="flex items-center gap-2.5">
+            <img src="logo.jpg" alt="Logo Sirius Digital" class="w-[60px] h-[60px] object-contain">
+            <div>
+                <h2 class="text-bleu-fonce text-[22px] tracking-wide">SIRIUS</h2>
+                <span class="text-bleu text-xs font-bold tracking-[4px]">DIGITAL</span>
+            </div>
+        </div>
+
+        <button class="md:hidden inline-flex items-center justify-center w-[46px] h-[46px] border border-[rgba(3,3,90,0.12)] rounded-[10px] bg-white text-bleu-fonce text-xl cursor-pointer transition duration-300 hover:bg-[#eef4ff] hover:border-bleu"
+                id="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="hidden md:flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6 absolute md:static top-[calc(100%+10px)] left-[18px] right-[18px] md:left-auto md:right-auto md:top-auto bg-white/98 md:bg-transparent border border-[rgba(3,3,90,0.08)] md:border-0 rounded-2xl md:rounded-none shadow-[0_18px_40px_rgba(3,3,90,0.1)] md:shadow-none p-5 md:p-0"
+             id="main-navbar">
+            <a href="#accueil" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Accueil</a>
+            <a href="a_propos.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">À propos</a>
+            <a href="nos_service.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Nos Services</a> 
+            
+            <a href="projet.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Projets</a>
+            <a href="#actualites" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Actualités</a>
+            <a href="contact.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="hidden md:inline-block px-5 py-3 text-white bg-bleu-fonce rounded-md font-bold transition duration-300 hover:bg-bleu hover:-translate-y-0.5">
+            Nous contacter
+        </a>
+
+    </header>
+
+
+    <!-- ================= ACCUEIL ================= -->
+    <section id="accueil"
+             class="flex flex-col md:flex-row items-center justify-between gap-12 px-[8%] py-20 min-h-[650px] overflow-hidden text-center md:text-left bg-cover bg-center"
+             style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=85');">
+
+        <div class="w-full md:w-[55%]">
+
+            <p class="text-[#8ed8ff] text-sm font-bold tracking-[2px] mb-4" style="text-shadow:0 2px 8px rgba(0,0,0,0.55);">
+                BIENVENUE CHEZ SIRIUS DIGITAL
+            </p>
+
+            <h1 class="text-white text-[36px] md:text-[52px] leading-[1.15] mb-6" style="text-shadow:0 3px 12px rgba(0,0,0,0.65);">
+                L'innovation numérique
+                <span class="block text-[#8ed8ff]">au service de votre avenir</span>
+            </h1>
+
+            <p class="max-w-[600px] mx-auto md:mx-0 text-white text-base md:text-lg mb-8" style="text-shadow:0 2px 8px rgba(0,0,0,0.65);">
+                Nous créons des solutions digitales modernes,
+                simples et adaptées aux besoins des entreprises
+                et des organisations.
+            </p>
+
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="nos_service.html" class="inline-flex items-center gap-2.5 px-6 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1">
+                    Découvrir nos services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="a_propos.html" class="inline-block px-6 py-[13px] border-2 border-bleu text-white md:text-bleu rounded-md font-bold transition duration-300 hover:bg-bleu hover:text-white">
+                    En savoir plus
+                </a>
+            </div>
+
+        </div>
+
+        <div class="w-full md:w-[40%] min-h-[400px] relative flex items-center justify-center mt-10 md:mt-0">
+
+            <div class="w-[270px] h-[270px] md:w-[330px] md:h-[330px] bg-gradient-to-br from-bleu-fonce to-bleu rounded-full absolute opacity-95"></div>
+
+            <div class="relative w-[270px] p-9 text-center bg-white/95 rounded-2xl shadow-[0_15px_40px_rgba(3,3,90,0.2)]">
+                <i class="fa-solid fa-laptop-code text-[65px] text-bleu mb-5 block"></i>
+                <h3 class="text-bleu-fonce mb-2 font-semibold text-lg">Solutions digitales</h3>
+                <p class="text-gris">Web • Mobile • Informatique</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= À PROPOS ================= -->
+    <section id="apropos" class="px-[8%] py-24 bg-white">
+
+        <div class="text-center mb-14">
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-2">QUI SOMMES-NOUS ?</p>
+            <h2 class="text-bleu-fonce text-[30px] md:text-[38px]">À propos de <span class="text-bleu">Sirius Digital</span></h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-16">
+
+            <div class="w-full md:w-[55%]">
+
+                <h3 class="text-bleu-fonce text-[28px] mb-5">Votre partenaire dans la transformation numérique</h3>
+
+                <p class="text-gris mb-4">
+                    Sirius Digital est une entreprise spécialisée
+                    dans le développement de solutions numériques
+                    modernes et performantes.
+                </p>
+
+                <p class="text-gris mb-4">
+                    Nous accompagnons les entreprises dans la création
+                    de leurs sites web, applications mobiles,
+                    logiciels et solutions informatiques.
+                </p>
+
+                <a href="contact.html" class="inline-flex items-center gap-2.5 mt-4 px-6 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1">
+                    Travaillons ensemble
+                </a>
+
+                <a href="a_propos.html" class="inline-flex items-center gap-2.5 mt-4 px-6 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1">
+                    Apprendre encore plus de nous
+                </a>
+
+            </div>
+
+            <div class="w-full md:w-[35%] p-11 text-center bg-gris-clair rounded-2xl border-t-4 border-bleu">
+
+                <i class="fa-solid fa-rocket text-[55px] text-bleu mb-5 block"></i>
+
+                <h3 class="text-bleu-fonce mb-3 font-semibold text-lg">Notre objectif</h3>
+
+                <p class="text-gris">
+                    Utiliser la technologie pour créer des solutions
+                    utiles, accessibles et innovantes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="px-[8%] py-24 bg-white">
+
+        <div class="text-center mb-14">
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-2">NOS SERVICES</p>
+            <h2 class="text-bleu-fonce text-[30px] md:text-[38px]">Des solutions adaptées à <span class="text-bleu">vos besoins</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="p-10 border border-[#e6eaf2] rounded-xl transition duration-300 hover:-translate-y-2 hover:border-bleu hover:shadow-[0_15px_35px_rgba(3,3,90,0.1)]">
+                <div class="w-[65px] h-[65px] flex items-center justify-center bg-[#eaf2ff] rounded-[10px] mb-5">
+                    <i class="fa-solid fa-code text-bleu text-[28px]"></i>
+                </div>
+                <h3 class="text-bleu-fonce mb-4 font-semibold text-lg">Développement web</h3>
+                <p class="text-gris mb-5">
+                    Nous utilisons des technologies de pointe pour concevoir des platformes interactives,
+                    conviviables et adapter à vos besoins spécifiques. De la conceptin à la mise en ligne,
+                    nous nous engageons à offrir des solutions personnalisées, garentissant des expériences
+                    utilisateur excepionnelles et une présence en ligne impactante.
+                </p>
+            </div>
+
+            <div class="p-10 border border-[#e6eaf2] rounded-xl transition duration-300 hover:-translate-y-2 hover:border-bleu hover:shadow-[0_15px_35px_rgba(3,3,90,0.1)]">
+                <div class="w-[65px] h-[65px] flex items-center justify-center bg-[#eaf2ff] rounded-[10px] mb-5">
+                    <i class="fa-solid fa-video text-bleu text-[28px]"></i>
+                </div>
+                <h3 class="text-bleu-fonce mb-4 font-semibold text-lg">Installation de caméra de surveillance</h3>
+                <p class="text-gris mb-5">
+                    Notre expertise en installations de caméras de surveillance assure la sécurité de vos locaux.
+                    Nous proposons des solutions de pointe pour la mise en place de systèmes de surveillance fiables et efficaces.
+                    Notre équipe garantit des solutions sur mesure répondant à vos besoins spécifiques en matière de sécurité.
+                </p>
+            </div>
+
+            <div class="p-10 border border-[#e6eaf2] rounded-xl transition duration-300 hover:-translate-y-2 hover:border-bleu hover:shadow-[0_15px_35px_rgba(3,3,90,0.1)]">
+                <div class="w-[65px] h-[65px] flex items-center justify-center bg-[#eaf2ff] rounded-[10px] mb-5">
+                    <i class="fa-solid fa-magnifying-glass-chart text-bleu text-[28px]"></i>
+                </div>
+                <h3 class="text-bleu-fonce mb-4 font-semibold text-lg">Optimisation du référencement</h3>
+                <p class="text-gris mb-5">
+                    Notre spécialisation en optimisation pour les moteurs de recherche (SEO) vous garentit une visibilité
+                    accue en ligne. Nous mettons en oeuvre des stategies SEO avancées pour améliorer le classement de votre site web
+                    sur les moteurs de recherche majeurs.
+                </p>
+            </div>
+
+            <div class="p-10 border border-[#e6eaf2] rounded-xl transition duration-300 hover:-translate-y-2 hover:border-bleu hover:shadow-[0_15px_35px_rgba(3,3,90,0.1)]">
+                <div class="w-[65px] h-[65px] flex items-center justify-center bg-[#eaf2ff] rounded-[10px] mb-5">
+                    <i class="fa-solid fa-globe text-bleu text-[28px]"></i>
+                </div>
+                <h3 class="text-bleu-fonce mb-4 font-semibold text-lg">Création de sites internet</h3>
+                <p class="text-gris mb-5">
+                    Notre service de création de site web offre des solutions personnalisées pour donner vie à votre présence en ligne.
+                    Nous concevons des sites web esthétiques et fonctionnels, adaptés à votre identité visuelle et à vos besoins spécifiques.
+                </p>
+            </div>
+
+            <div class="p-10 border border-[#e6eaf2] rounded-xl transition duration-300 hover:-translate-y-2 hover:border-bleu hover:shadow-[0_15px_35px_rgba(3,3,90,0.1)]">
+                <div class="w-[65px] h-[65px] flex items-center justify-center bg-[#eaf2ff] rounded-[10px] mb-5">
+                    <i class="fa-solid fa-server text-bleu text-[28px]"></i>
+                </div>
+                <h3 class="text-bleu-fonce mb-4 font-semibold text-lg">Solutions informatiques</h3>
+                <p class="text-gris mb-5">
+                    Nos services offrent des solutions informatiques complètes pour le développement d'applications,
+                    l'installation et la gestion de serveurs, ainsi que la gestion efficace des données. Nous concevons des sites
+                    web inovants et fonctionnels pour repondre à vos besoins spéciques. Notre expertise assure des soluitions pour
+                    optimiser votre infrastructure.
+                </p>
+            </div>
+
+            <div class="p-10 border border-[#e6eaf2] rounded-xl transition duration-300 hover:-translate-y-2 hover:border-bleu hover:shadow-[0_15px_35px_rgba(3,3,90,0.1)]">
+                <div class="w-[65px] h-[65px] flex items-center justify-center bg-[#eaf2ff] rounded-[10px] mb-5">
+                    <i class="fa-solid fa-database text-bleu text-[28px]"></i>
+                </div>
+                <h3 class="text-bleu-fonce mb-4 font-semibold text-lg">Gestion de données</h3>
+                <p class="text-gris mb-5">
+                    Notre service de gestion de données offre des solutions complètes pour organiser, stocker et sécuriser vos informations cruciales.
+                    Nous mettons en place des stratégies de gestion de données personnalisées, adaptées à vos besoins.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJETS ================= -->
+    <section id="projets" class="px-[8%] py-24 bg-gris-clair">
+
+        <div class="text-center mb-14">
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-2">NOS RÉALISATIONS</p>
+            <h2 class="text-bleu-fonce text-[30px] md:text-[38px]">Quelques-uns de nos <span class="text-bleu">projets</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="overflow-hidden bg-white rounded-xl shadow-[0_5px_20px_rgba(3,3,90,0.08)] transition duration-300 hover:-translate-y-2">
+                <div class="h-[210px] flex items-center justify-center bg-gradient-to-br from-bleu-fonce to-bleu">
+                    <i class="fa-solid fa-hotel text-white text-[70px]"></i>
+                </div>
+               <!---- <div class="p-6">
+                    <h3 class="text-bleu-fonce mb-2 font-semibold text-lg">Application de gestion d'hôtel</h3>
+                    <p class="text-gris">
+                        Gestion des chambres,
+                        réservations et clients.
+                    </p>
+                </div> -->
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACTUALITÉS ================= -->
+    <section id="actualites" class="px-[8%] py-24 bg-white">
+
+        <div class="text-center mb-14">
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-2">ACTUALITÉS</p>
+            <h2 class="text-bleu-fonce text-[30px] md:text-[38px]">Les dernières <span class="text-bleu">actualités</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <article class="p-9 border-l-4 border-bleu bg-gris-clair rounded-lg">
+                <div class="text-bleu text-xs font-bold mb-4">09 SEPTEMBRE 2026</div>
+                <h3 class="text-bleu-fonce text-[22px] mb-3">
+                    Sirius Digital développe de nouvelles
+                    solutions numériques
+                </h3>
+                <p class="text-gris mb-4">
+                    Découvrez nos nouveaux projets
+                    et nos innovations digitales.
+                </p>
+                <a href="#" class="text-bleu font-bold">Lire la suite →</a>
+            </article>
+
+            <article class="p-9 border-l-4 border-bleu bg-gris-clair rounded-lg">
+                <div class="text-bleu text-xs font-bold mb-4">2026</div>
+                <h3 class="text-bleu-fonce text-[22px] mb-3">
+                    Développement web et mobile
+                </h3>
+                <p class="text-gris mb-4">
+                    Des solutions modernes pour
+                    accompagner les entreprises.
+                </p>
+                <a href="#" class="text-bleu font-bold">Lire la suite →</a>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="px-[8%] py-24 bg-gris-clair">
+
+        <div class="text-center mb-14">
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-2">CONTACT</p>
+            <h2 class="text-bleu-fonce text-[30px] md:text-[38px]">Parlons de votre <span class="text-bleu">projet</span></h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between gap-16">
+
+            <div class="w-full md:w-[45%]">
+
+                <h3 class="text-bleu-fonce text-[28px] mb-4">Contactez Sirius Digital</h3>
+
+                <p class="text-gris mb-8">
+                    Vous avez un projet numérique ?
+                    Nous sommes prêts à vous accompagner.
+                </p>
+
+                <div class="flex items-center gap-4 mb-5">
+                    <i class="fa-solid fa-phone w-[45px] h-[45px] flex items-center justify-center bg-bleu text-white rounded-full"></i>
+                    <span>+228 71 41 10 02</span>
+                </div>
+
+                <div class="flex items-center gap-4 mb-5">
+                    <i class="fa-solid fa-envelope w-[45px] h-[45px] flex items-center justify-center bg-bleu text-white rounded-full"></i>
+                    <span>contact@siriusdigital.tech</span>
+                </div>
+
+                <div class="flex items-center gap-4 mb-5">
+                    <i class="fa-solid fa-location-dot w-[45px] h-[45px] flex items-center justify-center bg-bleu text-white rounded-full"></i>
+                    <span>Lomé, Togo</span>
+                </div>
+
+            </div>
+
+
+            <div class="w-full md:w-[50%] bg-white p-9 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+
+                <h3 class="text-[28px] text-bleu-fonce mb-6">Nous écrire</h3>
+
+                <form action="contact.php" method="POST" class="flex flex-col gap-1">
+
+                    <div class="flex flex-col md:flex-row gap-5">
+
+                        <div class="flex-1 mb-5">
+                            <label for="nom" class="block mb-2 font-semibold text-[#28292F]">Nom complet</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required
+                                   class="w-full h-[50px] px-3.5 border border-[#ddd] rounded-lg text-[15px] outline-none transition duration-300 focus:border-bleu focus:shadow-[0_0_0_3px_rgba(5,74,203,0.1)]">
+                        </div>
+
+                        <div class="flex-1 mb-5">
+                            <label for="email" class="block mb-2 font-semibold text-[#28292F]">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Votre adresse email" required
+                                   class="w-full h-[50px] px-3.5 border border-[#ddd] rounded-lg text-[15px] outline-none transition duration-300 focus:border-bleu focus:shadow-[0_0_0_3px_rgba(5,74,203,0.1)]">
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-5">
+
+                        <div class="flex-1 mb-5">
+                            <label for="telephone" class="block mb-2 font-semibold text-[#28292F]">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="+228 XX XX XX XX"
+                                   class="w-full h-[50px] px-3.5 border border-[#ddd] rounded-lg text-[15px] outline-none transition duration-300 focus:border-bleu focus:shadow-[0_0_0_3px_rgba(5,74,203,0.1)]">
+                        </div>
+
+                        <div class="flex-1 mb-5">
+                            <label for="sujet" class="block mb-2 font-semibold text-[#28292F]">Sujet</label>
+                            <input type="text" id="sujet" name="sujet" placeholder="Votre sujet" required
+                                   class="w-full h-[50px] px-3.5 border border-[#ddd] rounded-lg text-[15px] outline-none transition duration-300 focus:border-bleu focus:shadow-[0_0_0_3px_rgba(5,74,203,0.1)]">
+                        </div>
+
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="message" class="block mb-2 font-semibold text-[#28292F]">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message..." required
+                                  class="w-full min-h-[150px] p-3.5 border border-[#ddd] rounded-lg text-[15px] outline-none resize-y transition duration-300 focus:border-bleu focus:shadow-[0_0_0_3px_rgba(5,74,203,0.1)]"></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="w-fit inline-flex items-center gap-2.5 px-6 py-3.5 bg-bleu text-white rounded-lg font-bold text-base cursor-pointer transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1">
+                        Envoyer le message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-bleu-fonce text-white pt-16">
+
+        <div class="w-[90%] md:w-[84%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-14 pb-12">
+
+            <div class="lg:col-span-2">
+                <div class="flex items-center gap-4 mb-5">
+                    <img src="logo.jpg" alt="Sirius Digital" class="w-[55px] h-[55px]">
+                    <h2 class="text-lg font-semibold">SIRIUS DIGITAL</h2>
+                </div>
+                <p class="max-w-[400px] opacity-80">
+                    Votre partenaire pour la transformation
+                    numérique et l'innovation.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="mb-5 font-semibold">Liens rapides</h3>
+                <div class="flex flex-col gap-2.5">
+                    <a href="#accueil" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Accueil</a>
+                    <a href="a_propos.html" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">À propos</a>
+                    <a href="nos_service.html" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Nos Services</a>
+                    <a href="#projets" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Projets</a>
+                    <a href="contact.html" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Contact</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="mb-5 font-semibold">Contact</h3>
+                <p class="mb-3 flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Lomé, Togo</p>
+                <p class="mb-3 flex items-center gap-2"><i class="fa-solid fa-phone"></i> +228 71 41 10 02</p>
+                <p class="mb-3 flex items-center gap-2"><i class="fa-solid fa-envelope"></i> contact@siriusdigital.tech</p>
+            </div>
+
+            <div>
+                <h3 class="mb-5 font-semibold">Newsletter</h3>
+                <p class="opacity-80 mb-2">
+                    Inscrivez-vous à notre newsletter
+                    pour recevoir nos dernières actualités.
+                </p>
+                <form class="flex mt-5">
+                    <input type="email" placeholder="Votre adresse email" required
+                           class="flex-1 p-3.5 border-0 outline-none rounded-l-md text-[#28292F]">
+                    <button type="submit" class="px-5 py-3.5 border-0 bg-bleu text-white cursor-pointer rounded-r-md transition duration-300 hover:bg-[#1b63e5]">
+                        S'inscrire
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="w-[90%] md:w-[84%] mx-auto pb-8">
+            <h3 class="mb-4 font-semibold">Suivez-nous</h3>
+            <div class="flex gap-3">
+                <a href="#" class="w-[42px] h-[42px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce hover:-translate-y-1"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="w-[42px] h-[42px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce hover:-translate-y-1"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="w-[42px] h-[42px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce hover:-translate-y-1"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="w-[42px] h-[42px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="py-5 text-center border-t border-white/15">
+            <p class="opacity-70 text-sm">© <span id="year"></span> Sirius Digital - Tous droits réservés</p>
+        </div>
+
+    </footer>
+
+
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" type="button" aria-label="Retour en haut"
+            class="fixed right-6 bottom-6 w-[50px] h-[50px] rounded-full border-0 bg-bleu text-white text-2xl font-bold cursor-pointer opacity-0 invisible transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1 z-[999]">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Année dans le footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Menu mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('main-navbar');
+
+        const servicesToggle = document.getElementById('services-toggle');
+        const servicesMenu = document.getElementById('services-menu');
+
+        servicesToggle.addEventListener('click', () => {
+            const isOpen = !servicesMenu.classList.contains('hidden');
+            servicesMenu.classList.toggle('hidden', isOpen);
+            servicesToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        });
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navbar.classList.toggle('flex');
+            navbar.classList.toggle('hidden');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Fermer le menu au clic sur un lien (mobile)
+        navbar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    navbar.classList.add('hidden');
+                    navbar.classList.remove('flex');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Bouton retour en haut
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>

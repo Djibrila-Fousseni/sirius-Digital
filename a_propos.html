@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos - Sirius Digital</title>
+
+<!-- Tailwind CSS (Play CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'bleu-fonce': '#03035A',
+          'bleu': '#054ACB',
+          'bleu-clair': '#2878E8',
+          'gris': '#666666',
+          'gris-clair': '#f4f7fc',
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Icônes Font Awesome -->
+ <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: Arial, Helvetica, sans-serif; }
+</style>
+</head>
+
+<body class="text-[#28292F] bg-white leading-relaxed">
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-[1000] flex items-center justify-between px-[6%] py-3 min-h-[80px] bg-white shadow-[0_3px_15px_rgba(3,3,90,0.08)]">
+
+        <div class="flex items-center gap-2.5">
+            <img src="logo.jpg" alt="Logo Sirius Digital" class="w-[55px] h-[55px] object-contain rounded-full">
+            <div>
+                <h2 class="text-bleu-fonce text-[20px] tracking-wide leading-none">SIRIUS</h2>
+                <span class="text-bleu text-[11px] font-bold tracking-[3px]">DIGITAL</span>
+            </div>
+        </div>
+
+        <button class="md:hidden inline-flex items-center justify-center w-[46px] h-[46px] border border-[rgba(3,3,90,0.12)] rounded-[10px] bg-white text-bleu-fonce text-xl cursor-pointer transition duration-300 hover:bg-[#eef4ff] hover:border-bleu"
+                id="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="hidden md:flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-8 absolute md:static top-[calc(100%+10px)] left-[18px] right-[18px] md:left-auto md:right-auto md:top-auto bg-white/98 md:bg-transparent border border-[rgba(3,3,90,0.08)] md:border-0 rounded-2xl md:rounded-none shadow-[0_18px_40px_rgba(3,3,90,0.1)] md:shadow-none p-5 md:p-0"
+             id="main-navbar">
+            <a href="sirius.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Accueil</a>
+            <a href="a_propos.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-bleu">À Propos</a>
+
+            <div class="relative w-full md:w-auto">
+                <button id="services-toggle" type="button" class="w-full flex items-center justify-between md:justify-start gap-1.5 py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu" aria-expanded="false" aria-controls="services-menu">
+                    Nos Services <i class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+                <div id="services-menu" class="hidden static md:absolute md:top-[calc(100%+14px)] left-0 md:w-[220px] md:bg-white md:shadow-[0_18px_40px_rgba(3,3,90,0.12)] md:rounded-lg md:p-3">
+                    <a href="nos_service.html" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Présentation Service</a>
+                    <a href="nos_service.html#details" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Détails Des Services</a>
+                </div>
+            </div>
+
+            <div class="relative w-full md:w-auto group">
+                <button type="button" class="w-full flex items-center justify-between md:justify-start gap-1.5 py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">
+                    Projets <i class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+                <div class="static md:absolute md:top-[calc(100%+14px)] left-0 md:w-[200px] md:bg-white md:shadow-[0_18px_40px_rgba(3,3,90,0.12)] md:rounded-lg md:p-3 md:opacity-0 md:invisible md:translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-300">
+                    <a href="#" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Nos réalisations</a>
+                    <a href="#" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Étude de cas</a>
+                </div>
+            </div>
+
+            <a href="contact.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="hidden md:inline-block px-5 py-3 text-white bg-bleu rounded-md font-bold text-sm transition duration-300 hover:bg-bleu-fonce hover:-translate-y-0.5">
+            Obtenez de l'aide
+        </a>
+
+    </header>
+
+
+    <!-- ================= BANNIÈRE "À PROPOS DE NOUS" ================= -->
+    <section class="relative bg-bleu-fonce overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-bleu-fonce via-[#050540] to-black opacity-95"></div>
+        <div class="relative px-[6%] py-24 text-center">
+            <h1 class="text-white text-[34px] md:text-[44px] font-bold mb-4">À propos de nous</h1>
+            <p class="text-white/70 text-sm">
+                <a href="sirius.html" class="hover:text-bleu-clair">Accueil</a>
+                <span class="mx-2">/</span>
+                <span class="text-bleu-clair">À propos de nous</span>
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ================= AU SUJET DE NOTRE COMPAGNIE ================= -->
+    <section class="px-[6%] md:px-[8%] py-20 bg-white">
+
+        <div class="flex flex-col lg:flex-row items-start gap-14">
+
+            <div class="w-full lg:w-1/2">
+
+                <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-4">AU SUJET DE NOTRE COMPAGNIE</p>
+
+                <h2 class="text-bleu-fonce text-[28px] md:text-[36px] font-bold leading-tight mb-6">
+                    Offrir à votre entreprise un service informatique de qualité est notre passion.
+                </h2>
+
+                <p class="text-gris mb-8">
+                    Découvrez une approche unique où chaque solution informatique est façonnée
+                    pour répondre spécifiquement à vos besoins. Nous mettons en avant des solutions
+                    sur mesure, une expertise pointue et une approche personnalisée. Grâce à notre
+                    engagement envers l'excellence, nous transformons les défis technologiques en
+                    opportunités innovantes pour votre entreprise.
+                </p>
+
+                <div class="space-y-6 mb-8">
+
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-bleu-fonce">Installation De Caméra De Surveillance</span>
+                            <span class="text-sm font-semibold text-bleu">95%</span>
+                        </div>
+                        <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                            <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-bleu-fonce">Développement Web</span>
+                            <span class="text-sm font-semibold text-bleu">95%</span>
+                        </div>
+                        <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                            <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-bleu-fonce">Création De Site Web Responsive</span>
+                            <span class="text-sm font-semibold text-bleu">95%</span>
+                        </div>
+                        <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                            <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="nos_service.html" class="inline-flex items-center gap-2.5 px-6 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1">
+                    Apprendre encore plus
+                </a>
+
+            </div>
+
+            <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0">
+                <div class="rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(3,3,90,0.18)]">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+                         alt="Équipe Sirius Digital au travail" class="w-full h-[420px] object-cover">
+                </div>
+                <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-[0_15px_40px_rgba(3,3,90,0.2)] px-8 py-5">
+                    <h3 class="text-bleu-fonce text-2xl font-bold">Sirius Digital</h3>
+                    <span class="text-bleu text-xs font-bold tracking-[2px]">TOP AGENCE</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACCÉLÉREZ VOTRE CROISSANCE ================= -->
+    <section class="px-[6%] md:px-[8%] py-20 bg-gris-clair">
+
+        <div class="text-center mb-14">
+            <h2 class="text-bleu-fonce text-[28px] md:text-[36px] font-bold mb-3">Accélérez votre Croissance</h2>
+            <p class="text-gris max-w-2xl mx-auto">
+                Découvrez comment notre expertise peut propulser votre entreprise vers de nouveaux sommets.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <div>
+                <h3 class="text-bleu-fonce text-xl font-bold mb-4">Notre Engagement envers la Qualité</h3>
+                <p class="text-gris mb-4">
+                    Nous nous engageons à fournir des solutions innovantes et personnalisées pour
+                    répondre aux besoins spécifiques de votre entreprise. Notre approche axée sur la
+                    qualité garantit des résultats exceptionnels à chaque étape de notre collaboration.
+                </p>
+                <p class="text-gris">
+                    Nos équipes d'experts mettent en œuvre des stratégies efficaces pour optimiser
+                    votre présence numérique, augmenter votre visibilité et stimuler votre croissance.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-bleu-fonce text-xl font-bold mb-4">L'Impact Visuel</h3>
+                <p class="text-gris mb-4">
+                    Notre galerie visuelle dévoile comment notre travail transforme les concepts en
+                    réalité. Explorez nos projets passés pour avoir un aperçu de notre approche créative
+                    et innovante. Nous croyons en la puissance des images pour illustrer notre
+                    engagement envers l'excellence.
+                </p>
+                <p class="text-gris">
+                    Des vidéos inspirantes aux présentations visuelles, nous capturons l'essence même
+                    de votre marque et la présentons de manière captivante à votre public cible.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOS SERVICES ================= -->
+    <section id="services" class="px-[6%] md:px-[8%] py-20 bg-white">
+
+        <div class="text-center mb-14">
+            <h2 class="text-bleu-fonce text-[28px] md:text-[36px] font-bold mb-3">Nos Services</h2>
+            <p class="text-gris max-w-2xl mx-auto">
+                Découvrez nos domaines d'expertise pour répondre à vos besoins professionnels.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <div>
+                <i class="fa-solid fa-display text-bleu text-3xl mb-4"></i>
+                <h3 class="text-bleu-fonce font-bold text-lg mb-3">Conception de Sites Web</h3>
+                <p class="text-gris text-sm">
+                    Nous créons des sites Web attrayants, intuitifs et adaptés à vos besoins spécifiques.
+                </p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-mobile-screen-button text-bleu text-3xl mb-4"></i>
+                <h3 class="text-bleu-fonce font-bold text-lg mb-3">Développement d'Applications</h3>
+                <p class="text-gris text-sm">
+                    Nous concevons et développons des applications sur mesure pour répondre à vos exigences professionnelles.
+                </p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-camera text-bleu text-3xl mb-4"></i>
+                <h3 class="text-bleu-fonce font-bold text-lg mb-3">Installation de Caméras de Surveillance</h3>
+                <p class="text-gris text-sm">
+                    Nous installons des systèmes de surveillance robustes pour assurer la sécurité de vos locaux.
+                </p>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-database text-bleu text-3xl mb-4"></i>
+                <h3 class="text-bleu-fonce font-bold text-lg mb-3">Gestion des Données</h3>
+                <p class="text-gris text-sm">
+                    Nous proposons des solutions de gestion de données efficaces pour optimiser votre flux d'informations.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA SOMBRE ================= -->
+    <section class="relative bg-bleu-fonce overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-bleu-fonce via-[#050540] to-black opacity-95"></div>
+        <div class="relative px-[6%] py-20 text-center">
+            <p class="text-orange-400 font-bold text-[13px] tracking-[2px] mb-4">VOULEZ-VOUS TRAVAILLER AVEC NOUS ?</p>
+            <h2 class="text-white text-[26px] md:text-[36px] font-bold mb-6 max-w-3xl mx-auto">
+                Transformez numériquement et développez votre entreprise !
+            </h2>
+            <p class="text-white/70 max-w-2xl mx-auto mb-10">
+                Vous aspirez à élever votre entreprise vers de nouveaux sommets numériques ? Chez nous,
+                cette transformation est une réalité palpable. Nous sommes passionnés par la redéfinition du
+                paysage numérique pour votre entreprise.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="tel:+22871411002" class="px-7 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-clair hover:-translate-y-1">
+                    Appelle Maintenant
+                </a>
+                <a href="contact.html" class="px-7 py-3.5 bg-white text-bleu-fonce rounded-md font-bold transition duration-300 hover:bg-gris-clair hover:-translate-y-1">
+                    Contactez-nous
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= LA CLÉ DU SUCCÈS ================= -->
+    <section id="contact" class="px-[6%] py-20 bg-white text-center">
+        <h2 class="text-bleu-fonce text-[24px] md:text-[32px] font-bold mb-4 max-w-3xl mx-auto">
+            La clé du succès est de commencer avant que vous ne soyez prêt.
+        </h2>
+        <p class="text-gris max-w-2xl mx-auto mb-8">
+            Nous sommes prêts à vous aider à concrétiser vos idées. Contactez-nous dès aujourd'hui pour discuter de votre projet ou obtenir un devis gratuit.
+        </p>
+        <a href="contact.html" class="inline-block px-7 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1">
+            Contactez-nous
+        </a>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-bleu-fonce text-white">
+
+        <!-- Newsletter -->
+        <div class="px-[6%] md:px-[8%] py-10 border-b border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h3 class="text-xl font-bold mb-1">Inscrivez-vous à notre newsletter</h3>
+                <p class="text-white/70 text-sm">Nous proposons une newsletter technologique mensuelle informative - consultez-la.</p>
+            </div>
+            <form class="flex w-full md:w-auto">
+                <input type="email" placeholder="Votre adresse email" required
+                       class="w-full md:w-[260px] px-4 py-3 rounded-l-md outline-none text-[#28292F]">
+                <button type="submit" class="px-5 py-3 bg-bleu rounded-r-md font-bold text-sm whitespace-nowrap transition duration-300 hover:bg-bleu-clair">
+                    Abonnez-Vous Maintenant
+                </button>
+            </form>
+        </div>
+
+        <!-- Colonnes -->
+        <div class="px-[6%] md:px-[8%] py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <div>
+                <h3 class="font-bold text-lg mb-4">À Propos de Nous</h3>
+                <p class="text-white/70 text-sm mb-3">
+                    Bienvenue chez Sirius Digital, votre partenaire en innovation numérique. Nous créons
+                    des solutions sur mesure pour élever votre entreprise vers de nouveaux sommets.
+                </p>
+                <p class="text-white/70 text-sm">
+                    Notre équipe experte allie savoir-faire technique et créativité pour redéfinir le paysage numérique.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-4">Nos services</h3>
+                <div class="flex flex-col gap-2.5 text-sm">
+                    <a href="#" class="text-white/70 hover:text-bleu-clair transition duration-300">Développement Web</a>
+                    <a href="#" class="text-white/70 hover:text-bleu-clair transition duration-300">Installation De Caméra De Surveillance</a>
+                    <a href="#" class="text-white/70 hover:text-bleu-clair transition duration-300">Création De Site Web Responsive</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-4">Liens utiles</h3>
+                <div class="flex flex-col gap-2.5 text-sm">
+                    <a href="a_propos.html" class="text-white/70 hover:text-bleu-clair transition duration-300">À propos de nous</a>
+                    <a href="projet.html" class="text-white/70 hover:text-bleu-clair transition duration-300">Étude de cas</a>
+                    <a href="contact.html" class="text-white/70 hover:text-bleu-clair transition duration-300">Contactez-nous</a>
+                    <a href="#" class="text-white/70 hover:text-bleu-clair transition duration-300">Politique de confidentialité</a>
+                    <a href="#" class="text-white/70 hover:text-bleu-clair transition duration-300">Termes et conditions</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-4">Informations de contact</h3>
+                <div class="flex items-start gap-3 mb-4">
+                    <i class="fa-solid fa-phone mt-1 text-bleu-clair"></i>
+                    <div class="text-sm text-white/70">
+                        <span class="block text-white font-semibold">Téléphone</span>
+                        (+228) 71 41 10 02 / 22 61 78 84
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 mb-4">
+                    <i class="fa-solid fa-envelope mt-1 text-bleu-clair"></i>
+                    <div class="text-sm text-white/70">
+                        <span class="block text-white font-semibold">E-mail</span>
+                        contact@siriusdigital.tech
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-location-dot mt-1 text-bleu-clair"></i>
+                    <div class="text-sm text-white/70">
+                        <span class="block text-white font-semibold">Adresse</span>
+                        Kégué, Lomé-Togo, 16BP20
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="px-[6%] md:px-[8%] py-5 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-white/60 text-sm">© <span id="year"></span> Sirius Digital - Tous droits réservés</p>
+            <div class="flex gap-3">
+                <a href="#" class="w-[38px] h-[38px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="w-[38px] h-[38px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="w-[38px] h-[38px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="w-[38px] h-[38px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" type="button" aria-label="Retour en haut"
+            class="fixed right-6 bottom-6 w-[50px] h-[50px] rounded-full border-0 bg-bleu text-white text-2xl font-bold cursor-pointer opacity-0 invisible transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1 z-[999]">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('main-navbar');
+
+        const servicesToggle = document.getElementById('services-toggle');
+        const servicesMenu = document.getElementById('services-menu');
+
+        servicesToggle.addEventListener('click', () => {
+            const isOpen = !servicesMenu.classList.contains('hidden');
+            servicesMenu.classList.toggle('hidden', isOpen);
+            servicesToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        });
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navbar.classList.toggle('flex');
+            navbar.classList.toggle('hidden');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+
+</body>
+</html>
