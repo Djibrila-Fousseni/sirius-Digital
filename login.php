@@ -34,86 +34,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <title>Connexion - Sirius Digital</title>
 
+    <!-- Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bleu-fonce': '#03035A',
+                        'bleu': '#054ACB',
+                        'bleu-clair': '#2878E8',
+                        'gris': '#666666',
+                        'gris-clair': '#f4f7fc',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .login-box {
-            background: white;
-            padding: 30px;
-            width: 350px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #03035A;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            box-sizing: border-box;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #054ACB;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .erreur {
-            color: red;
-            text-align: center;
-        }
+        body { font-family: Arial, sans-serif; }
     </style>
 </head>
 
-<body>
+<body class="bg-gris-clair min-h-screen flex items-center justify-center p-5">
 
-<div class="login-box">
+    <div class="w-full max-w-[350px] bg-white p-8 rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.1)]">
 
-    <h1>Administration</h1>
+        <h1 class="text-center text-bleu-fonce text-2xl font-bold mb-6">Administration</h1>
 
-    <?php if ($erreur != "") { ?>
-        <p class="erreur"><?php echo $erreur; ?></p>
-    <?php } ?>
+        <?php if ($erreur != "") { ?>
+            <p class="text-red-600 text-center text-sm mb-4"><?php echo $erreur; ?></p>
+        <?php } ?>
 
-    <form method="POST">
+        <form method="POST" class="flex flex-col gap-4">
 
-        <input
-            type="text"
-            name="nom_utilisateur"
-            placeholder="Nom d'utilisateur"
-            required
-        >
+            <input
+                type="text"
+                name="nom_utilisateur"
+                placeholder="Nom d'utilisateur"
+                required
+                class="w-full px-4 py-3 border border-[#ddd] rounded-lg text-[15px] outline-none transition duration-300 focus:border-bleu focus:shadow-[0_0_0_3px_rgba(5,74,203,0.1)]"
+            >
 
-        <input
-            type="password"
-            name="mot_de_passe"
-            placeholder="Mot de passe"
-            required
-        >
+            <input
+                type="password"
+                name="mot_de_passe"
+                placeholder="Mot de passe"
+                required
+                class="w-full px-4 py-3 border border-[#ddd] rounded-lg text-[15px] outline-none transition duration-300 focus:border-bleu focus:shadow-[0_0_0_3px_rgba(5,74,203,0.1)]"
+            >
 
-        <button type="submit">
-            Se connecter
-        </button>
+            <button type="submit"
+                    class="w-full px-4 py-3 bg-bleu text-white font-bold rounded-lg cursor-pointer transition duration-300 hover:bg-bleu-fonce">
+                Se connecter
+            </button>
 
-    </form>
+        </form>
 
-</div>
+    </div>
 
 </body>
 </html>

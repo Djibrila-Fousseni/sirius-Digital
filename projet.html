@@ -68,24 +68,44 @@
             <a href="sirius.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Accueil</a>
             <a href="a_propos.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">À Propos</a>
 
-            <div class="relative w-full md:w-auto group">
-                <button type="button" class="w-full flex items-center justify-between md:justify-start gap-1.5 py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">
-                    Nos Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            <div class="relative group w-full md:w-auto">
+                <button type="button" class="flex items-center w-full md:w-auto py-1.5 md:py-0 text-left text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu focus:outline-none">
+                    Nos Services
+                    <span class="ml-1">▾</span>
                 </button>
-                <div class="static md:absolute md:top-[calc(100%+14px)] left-0 md:w-[220px] md:bg-white md:shadow-[0_18px_40px_rgba(3,3,90,0.12)] md:rounded-lg md:p-3 md:opacity-0 md:invisible md:translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-300">
-                    <a href="nos-services.html" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Présentation Service</a>
-                    <a href="nos-services.html#details" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Détails Des Services</a>
-                </div>
+
+                <ul class="absolute left-0 top-full mt-3 w-60 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 list-none">
+                    <li class="border-b border-gray-200">
+                        <a href="nos_service.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Prestations de service
+                        </a>
+                    </li>
+                    <li>
+                        <a href="nos_service.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Détails des services
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="relative w-full md:w-auto group">
-                <button type="button" class="w-full flex items-center justify-between md:justify-start gap-1.5 py-1.5 md:py-0 text-[15px] font-semibold text-bleu" aria-current="page">
-                    Projets <i class="fa-solid fa-chevron-down text-xs"></i>
+                  <div class="relative group w-full md:w-auto">
+                <button type="button" class="flex items-center w-full md:w-auto py-1.5 md:py-0 text-left text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu focus:outline-none">
+                    Projets
+                    <span class="ml-1">▾</span>
                 </button>
-                <div class="static md:absolute md:top-[calc(100%+14px)] left-0 md:w-[200px] md:bg-white md:shadow-[0_18px_40px_rgba(3,3,90,0.12)] md:rounded-lg md:p-3 md:opacity-0 md:invisible md:translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-300">
-                    <a href="projet.html" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Nos réalisations</a>
-                    <a href="#" class="block px-2 py-2 text-sm text-[#28292F] rounded hover:bg-[#eef4ff] hover:text-bleu">Étude de cas</a>
-                </div>
+
+                <ul class="absolute left-0 top-full mt-3 w-60 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 list-none">
+                    <li class="border-b border-gray-200">
+                        <a href="projet.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Nos projets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projet.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Détails des projets
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <a href="contact.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Contact</a>
@@ -105,9 +125,9 @@
         <div class="relative px-[6%] py-24 text-center">
             <h1 class="text-white text-[34px] md:text-[44px] font-bold mb-4">Projets</h1>
             <p class="text-white/70 text-sm">
-                <a href="index.html" class="hover:text-bleu-clair">Accueil</a>
+                <a href="sirius.html" class="hover:text-bleu-clair">Accueil</a>
                 <span class="mx-2">/</span>
-                <span class="text-bleu-clair">Projets</span>
+                <span class="text-bleu-clair">Nos Projets</span>
             </p>
         </div>
     </section>

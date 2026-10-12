@@ -55,174 +55,108 @@ $connexion->close();
 
     <title>Voir le message - Sirius Digital</title>
 
+    <!-- Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bleu-fonce': '#03035A',
+                        'bleu': '#054ACB',
+                        'bleu-clair': '#2878E8',
+                        'gris': '#666666',
+                        'gris-clair': '#f4f7fc',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icônes Font Awesome -->
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fc;
-            padding: 40px;
-            color: #28292F;
-        }
-
-        .message-container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        h1 {
-            color: #03035A;
-            margin-bottom: 25px;
-        }
-
-        .information {
-            margin-bottom: 20px;
-        }
-
-        .information strong {
-            color: #03035A;
-        }
-
-        .message {
-            background: #f4f7fc;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 10px;
-            white-space: pre-wrap;
-        }
-
-        .btn-retour {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 25px;
-            padding: 12px 20px;
-            background: #054ACB;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-           transition: 0.3s;
-        }
-
-        .btn-retour:hover {
-           background: #03035A;
-           transform: translateY(-2px);
-        }
-
-        .logo {
-           display: block;
-           width: 180px;
-           margin: 0 auto 25px;
-        }
-
-        .information {
-            padding: 15px;
-            margin-bottom: 12px;
-            background: #f8f9fc;
-            border-radius: 8px;
-            border-left: 4px solid #054ACB;
-        }
-
-        .information strong {
-            display: inline-block;
-            min-width: 120px;
-            color: #03035A;
-        }
-
-        .information i {
-            margin-right: 8px;
-            color: #054ACB;
-        }
-
-        .message {
-            margin-top: 12px;
-            line-height: 1.6;
-            background: white;
-            border: 1px solid #e5e5e5;
-        }
-
-        .btn-imprimer {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 25px;
-            margin-left: 10px;
-            padding: 12px 20px;
-            background: #03035A;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .btn-imprimer:hover {
-            background: #054ACB;
-            transform: translateY(-2px);
-        }
+        body { font-family: Arial, sans-serif; }
     </style>
 </head>
 
-<body>
+<body class="bg-gris-clair text-[#28292F] p-5 md:p-10">
 
-<div class="message-container">
+<div class="max-w-[800px] mx-auto bg-white p-6 md:p-[30px] rounded-xl shadow-[0_5px_20px_rgba(0,0,0,0.08)]">
 
-<img src="logo.jpg" alt="Sirius Digital" class="logo">
-    <h1>Détail du message</h1>
+    <img src="logo.jpg" alt="Sirius Digital" class="block w-[180px] mx-auto mb-6">
 
-    <div class="information">
-       <strong><i class="fa-solid fa-user"></i> Nom :</strong>
+    <h1 class="text-bleu-fonce text-3xl font-bold mb-6">Détail du message</h1>
+
+    <div class="p-4 mb-3 bg-[#f8f9fc] rounded-lg border-l-4 border-bleu">
+        <strong class="inline-block min-w-[120px] text-bleu-fonce">
+            <i class="fa-solid fa-user mr-2 text-bleu"></i> Nom :
+        </strong>
         <?php echo htmlspecialchars($message["nom"]); ?>
     </div>
 
-    <div class="information">
-       <strong><i class="fa-solid fa-envelope"></i> Email :</strong>
+    <div class="p-4 mb-3 bg-[#f8f9fc] rounded-lg border-l-4 border-bleu">
+        <strong class="inline-block min-w-[120px] text-bleu-fonce">
+            <i class="fa-solid fa-envelope mr-2 text-bleu"></i> Email :
+        </strong>
         <?php echo htmlspecialchars($message["email"]); ?>
     </div>
 
-    <div class="information">
-       <strong><i class="fa-solid fa-phone"></i> Téléphone :</strong>
+    <div class="p-4 mb-3 bg-[#f8f9fc] rounded-lg border-l-4 border-bleu">
+        <strong class="inline-block min-w-[120px] text-bleu-fonce">
+            <i class="fa-solid fa-phone mr-2 text-bleu"></i> Téléphone :
+        </strong>
         <?php echo htmlspecialchars($message["telephone"]); ?>
     </div>
 
-    <div class="information">
-        <strong><i class="fa-solid fa-tag"></i> Sujet :</strong>
+    <div class="p-4 mb-3 bg-[#f8f9fc] rounded-lg border-l-4 border-bleu">
+        <strong class="inline-block min-w-[120px] text-bleu-fonce">
+            <i class="fa-solid fa-tag mr-2 text-bleu"></i> Sujet :
+        </strong>
         <?php echo htmlspecialchars($message["sujet"]); ?>
     </div>
 
-    <div class="information">
-       <strong><i class="fa-solid fa-calendar"></i> Date :</strong>
+    <div class="p-4 mb-3 bg-[#f8f9fc] rounded-lg border-l-4 border-bleu">
+        <strong class="inline-block min-w-[120px] text-bleu-fonce">
+            <i class="fa-solid fa-calendar mr-2 text-bleu"></i> Date :
+        </strong>
         <?php echo htmlspecialchars($message["date_creation"]); ?>
     </div>
 
-    <div class="information">
-        <strong><i class="fa-solid fa-circle-check"></i> Statut :</strong>
+    <div class="p-4 mb-3 bg-[#f8f9fc] rounded-lg border-l-4 border-bleu">
+        <strong class="inline-block min-w-[120px] text-bleu-fonce">
+            <i class="fa-solid fa-circle-check mr-2 text-bleu"></i> Statut :
+        </strong>
         <?php echo htmlspecialchars($message["statut"]); ?>
     </div>
 
-    <div class="information">
-        <strong><i class="fa-solid fa-message"></i> Message :</strong>
+    <div class="p-4 mb-3 bg-[#f8f9fc] rounded-lg border-l-4 border-bleu">
+        <strong class="inline-block min-w-[120px] text-bleu-fonce">
+            <i class="fa-solid fa-message mr-2 text-bleu"></i> Message :
+        </strong>
 
-        <div class="message">
+        <div class="mt-3 p-5 bg-white border border-[#e5e5e5] rounded-lg leading-relaxed whitespace-pre-wrap">
             <?php echo htmlspecialchars($message["message"]); ?>
         </div>
     </div>
 
-    <a href="admin.php" class="btn-retour">
-       <i class="fa-solid fa-arrow-left"></i>
-       Retour à l'administration
-    </a>
+    <div class="flex flex-wrap items-center gap-2.5 mt-6 print:hidden">
 
-    <button onclick="window.print()" class="btn-imprimer">
-       <i class="fa-solid fa-print"></i>
-       Imprimer
-    </button>
+        <a href="admin.php"
+           class="inline-flex items-center gap-2 px-5 py-3 bg-bleu text-white rounded-lg transition duration-300 hover:bg-bleu-fonce hover:-translate-y-0.5">
+            <i class="fa-solid fa-arrow-left"></i>
+            Retour à l'administration
+        </a>
+
+        <button onclick="window.print()"
+                class="inline-flex items-center gap-2 px-5 py-3 bg-bleu-fonce text-white text-base rounded-lg cursor-pointer transition duration-300 hover:bg-bleu hover:-translate-y-0.5">
+            <i class="fa-solid fa-print"></i>
+            Imprimer
+        </button>
+
+    </div>
 
 </div>
 

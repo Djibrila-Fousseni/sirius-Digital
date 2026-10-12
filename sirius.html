@@ -27,9 +27,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-  html { scroll-behavior: smooth; }
-  body { font-family: Arial, Helvetica, sans-serif; }
+  .fill-hover {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.35s ease;
+  }
+  .fill-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #054ACB; /* bleu */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: -1;
+  }
+  .fill-hover:hover::before {
+    transform: scaleX(1);
+  }
+  .fill-hover:hover {
+    color: #ffffff;
+  }
 </style>
+
 </head>
 
 <body class="text-[#28292F] bg-white leading-relaxed">
@@ -52,11 +73,49 @@
 
         <nav class="hidden md:flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6 absolute md:static top-[calc(100%+10px)] left-[18px] right-[18px] md:left-auto md:right-auto md:top-auto bg-white/98 md:bg-transparent border border-[rgba(3,3,90,0.08)] md:border-0 rounded-2xl md:rounded-none shadow-[0_18px_40px_rgba(3,3,90,0.1)] md:shadow-none p-5 md:p-0"
              id="main-navbar">
-            <a href="#accueil" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Accueil</a>
+            <a href="sirius.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Accueil</a>
             <a href="a_propos.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">À propos</a>
-            <a href="nos_service.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Nos Services</a> 
+
+            <div class="relative group w-full md:w-auto">
+                <button type="button" class="flex items-center w-full md:w-auto py-1.5 md:py-0 text-left text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu focus:outline-none">
+                    Nos Services
+                    <span class="ml-1">▾</span>
+                </button>
+
+                <ul class="absolute left-0 top-full mt-3 w-60 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 list-none">
+                    <li class="border-b border-gray-200">
+                        <a href="nos_service.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Prestations de service
+                        </a>
+                    </li>
+                    <li>
+                        <a href="nos_service.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Détails des services
+                        </a>
+                    </li>
+                </ul>
+            </div>
             
-            <a href="projet.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Projets</a>
+            <div class="relative group w-full md:w-auto">
+                <button type="button" class="flex items-center w-full md:w-auto py-1.5 md:py-0 text-left text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu focus:outline-none">
+                    Projets
+                    <span class="ml-1">▾</span>
+                </button>
+
+                <ul class="absolute left-0 top-full mt-3 w-60 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 list-none">
+                    <li class="border-b border-gray-200">
+                        <a href="projet.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Nos projets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projet.html" class="block px-5 py-4 text-gray-800 hover:bg-gray-100 hover:text-purple-600 transition duration-200">
+                            Détails des projets
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
             <a href="#actualites" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Actualités</a>
             <a href="contact.html" class="w-full md:w-auto py-1.5 md:py-0 text-[15px] font-semibold text-[#28292F] transition duration-300 hover:text-bleu">Contact</a>
         </nav>
@@ -259,7 +318,222 @@
     </section>
 
 
-    <!-- ================= PROJETS ================= -->
+   <!-- ================= AU SUJET DE NOTRE COMPAGNIE ================= -->
+<section class="px-[6%] md:px-[8%] py-20 bg-white">
+
+    <div class="flex flex-col lg:flex-row items-start gap-14">
+
+        <!-- Texte -->
+        <div class="w-full lg:w-1/2">
+
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-4">AU SUJET DE NOTRE COMPAGNIE</p>
+
+            <h2 class="text-bleu-fonce text-[28px] md:text-[36px] font-bold leading-tight mb-6">
+                Offrir à votre entreprise un service informatique de qualité est notre passion.
+            </h2>
+
+            <p class="text-gris mb-8">
+                Découvrez une approche unique où chaque solution informatique est façonnée
+                pour répondre spécifiquement à vos besoins. Nous mettons en avant des solutions
+                sur mesure, une expertise pointue et une approche personnalisée. Grâce à notre
+                engagement envers l'excellence, nous transformons les défis technologiques en
+                opportunités innovantes pour votre entreprise.
+            </p>
+
+            <!-- Barres de progression -->
+            <div class="space-y-5 mb-8">
+
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-semibold text-bleu-fonce">Installation De Caméra De Surveillance</span>
+                        <span class="text-sm font-semibold text-bleu">95%</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                        <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-semibold text-bleu-fonce">Développement Web</span>
+                        <span class="text-sm font-semibold text-bleu">95%</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                        <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-semibold text-bleu-fonce">Création De Site Web Responsive</span>
+                        <span class="text-sm font-semibold text-bleu">95%</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                        <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="flex items-center gap-2 font-semibold text-bleu-fonce">
+                            <i class="fa-solid fa-globe text-bleu"></i> Développement Web
+                        </span>
+                        <span class="text-sm font-semibold text-bleu">95%</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                        <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="flex items-center gap-2 font-semibold text-bleu-fonce">
+                            <i class="fa-solid fa-mobile-screen-button text-bleu"></i> Sites Web Responsives
+                        </span>
+                        <span class="text-sm font-semibold text-bleu">95%</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-[#e6eaf2]">
+                        <div class="h-2 rounded-full bg-gradient-to-r from-bleu-fonce to-bleu" style="width:95%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="nos_service.html" class="inline-flex items-center gap-2.5 px-6 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1">
+                Apprendre encore plus
+            </a>
+
+        </div>
+
+        <!-- Image + badge -->
+        <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0">
+            <div class="rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(3,3,90,0.18)]">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+                     alt="Équipe Sirius Digital au travail" class="w-full h-[420px] object-cover">
+            </div>
+            <div class="absolute -bottom-6 left-6 bg-white rounded-xl shadow-[0_15px_40px_rgba(3,3,90,0.2)] px-8 py-5 border-t-4 border-bleu">
+                <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-bleu-fonce to-bleu-clair text-2xl font-bold">
+                    Sirius Digital
+                </h3>
+                <span class="text-bleu text-xs font-bold tracking-[2px]">TOP AGENCE</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= POURQUOI NOUS FAIRE CONFIANCE (Transformation numérique) ================= -->
+<section class="px-[6%] md:px-[8%] py-20 bg-white">
+
+    <div class="flex flex-col lg:flex-row items-center gap-14">
+
+        <!-- Texte -->
+        <div class="w-full lg:w-1/2">
+
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-4">POURQUOI NOUS FAIRE CONFIANCE ?</p>
+
+            <h2 class="text-bleu-fonce text-[26px] md:text-[34px] font-bold leading-tight mb-6">
+                Réalisez la transformation numérique de vos services avec efficacité et sérénité.
+            </h2>
+
+            <p class="text-gris mb-10">
+                Confiez-nous la transformation digitale de votre entreprise ! Nous nous engageons
+                fermement à protéger vos données et à assurer la sécurité de vos activités.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+               <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                  <span class="font-semibold text-bleu-fonce transition duration-300">Protégez votre entreprise</span>
+               </div>
+
+                <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                    <span class="font-semibold text-bleu-fonce transition duration-300">Sécurité Internet</span>
+                </div>
+
+                <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                   <span class="font-semibold text-bleu-fonce transition duration-300">Sécurité des données</span>
+                </div>
+
+                <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                   <span class="font-semibold text-bleu-fonce transition duration-300">Surveillance Matériels</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Image -->
+        <div class="w-full lg:w-1/2">
+            <div class="rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(3,3,90,0.18)]">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80"
+                     alt="Équipe en réunion de transformation digitale" class="w-full h-[420px] object-cover">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- ================= POURQUOI NOUS FAIRE CONFIANCE (Caméras) ================= -->
+<section class="px-[6%] md:px-[8%] py-20 bg-white">
+
+    <div class="flex flex-col lg:flex-row items-center gap-14">
+
+        <!-- Texte -->
+        <div class="w-full lg:w-1/2">
+
+            <p class="text-bleu font-bold text-[13px] tracking-[2px] mb-4">POUQUOI NOUS FAIRE DE CONFIANCE ?</p>
+
+            <h2 class="text-bleu-fonce text-[26px] md:text-[34px] font-bold leading-tight mb-6">
+                Assurez la Sécurité avec Nos Solutions de Caméras de Surveillance
+            </h2>
+
+            <p class="text-gris mb-10">
+                Garantissez la sécurité de votre environnement professionnel grâce à nos solutions
+                avancées de caméras de surveillance. Chez Sirius Digital, nous comprenons l'importance
+                de la tranquillité d'esprit, c'est pourquoi nous proposons des systèmes de surveillance
+                haute performance adaptés à vos besoins spécifiques.
+            </p>
+
+           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                 <span class="font-semibold text-bleu-fonce transition duration-300">Caméras Haute Définition (CHD)</span>
+                </div>
+
+                <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                  <span class="font-semibold text-bleu-fonce transition duration-300">Systèmes de Vidéosurveillance Intelligents (SVI)</span>
+                </div>
+
+                <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                   <span class="font-semibold text-bleu-fonce transition duration-300">Intégration avec la Sécurité Informatique (ICI)</span>
+                </div>
+
+                <div class="fill-hover border-l-4 border-bleu bg-gris-clair rounded-r-lg px-5 py-4 cursor-pointer">
+                  <span class="font-semibold text-bleu-fonce transition duration-300">Conseils d'Esperts (CE)</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Image unique (grille de caméras déjà assemblée) -->
+        <div class="w-full lg:w-1/2">
+            <div class="rounded-2xl overflow-hidden shadow-[0_15px_35px_rgba(3,3,90,0.12)]">
+                <img src="camera.png"
+                     alt="Nos solutions de caméras de surveillance"
+                     class="w-full h-auto object-contain">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJETS ================= -->
     <section id="projets" class="px-[8%] py-24 bg-gris-clair">
 
         <div class="text-center mb-14">
@@ -273,19 +547,19 @@
                 <div class="h-[210px] flex items-center justify-center bg-gradient-to-br from-bleu-fonce to-bleu">
                     <i class="fa-solid fa-hotel text-white text-[70px]"></i>
                 </div>
-               <!---- <div class="p-6">
+                <div class="p-6">
                     <h3 class="text-bleu-fonce mb-2 font-semibold text-lg">Application de gestion d'hôtel</h3>
                     <p class="text-gris">
                         Gestion des chambres,
-                        réservations et clients.
+                        réservations et clients...etc.
                     </p>
-                </div> -->
+                    <a href="https://hotelerie.siriusdigital.tech" class="text-bleu font-bold mt-3 inline-block">Voir ce projet →</a>
+                </div> 
             </div>
 
         </div>
 
     </section>
-
 
     <!-- ================= ACTUALITÉS ================= -->
     <section id="actualites" class="px-[8%] py-24 bg-white">
@@ -326,6 +600,28 @@
 
     </section>
 
+ <section class="relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80');">  
+       <!-- <div class="absolute inset-0 bg-gradient-to-br from-bleu-fonce via-[#050540] to-black opacity-95"></div> -->
+        <div class="relative px-[6%] py-20 text-center">
+            <p class="text-orange-400 font-bold text-[13px] tracking-[2px] mb-4">VOULEZ-VOUS TRAVAILLER AVEC NOUS ?</p>
+            <h2 class="text-white text-[26px] md:text-[36px] font-bold mb-6 max-w-3xl mx-auto">
+                Transformez numériquement et développez votre entreprise !
+            </h2>
+            <p class="text-white/70 max-w-2xl mx-auto mb-10">
+                Rejoignez-nous pour une collaboration innovante qui propulsera votre entreprise vers de nouveaux sommets. Ensemble, nous pouvons créer des solutions numériques qui feront la différence.
+                Chez Sirius Digital, nous sommes passionnés par la transformation numerique et nous sommes prèts à mettre notre expertise au service de votre succès. 
+                Contactez-nous dès aujourd'hui pour discuter de la manière dont nous pouvons vous aider à atteindre vos objectifs commerciaux.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="tel:+22871411002" class="px-7 py-3.5 bg-bleu text-white rounded-md font-bold transition duration-300 hover:bg-bleu-clair hover:-translate-y-1">
+                    Appelle Maintenant
+                </a>
+                <a href="contact.html" class="fill-hover px-7 py-3.5 bg-white text-bleu-fonce rounded-md font-bold transition duration-300 hover:bg-gris-clair hover:-translate-y-1">
+                    Contactez-nous
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- ================= CONTACT ================= -->
     <section id="contact" class="px-[8%] py-24 bg-gris-clair">
@@ -426,6 +722,20 @@
     <!-- ================= FOOTER ================= -->
     <footer class="bg-bleu-fonce text-white pt-16">
 
+ <div class="px-[6%] md:px-[8%] py-10 border-b border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h3 class="text-xl font-bold mb-1">Inscrivez-vous à notre newsletter</h3>
+                <p class="text-white/70 text-sm">Nous proposons une newsletter technologique mensuelle informative - consultez-la.</p>
+            </div>
+            <form class="flex w-full md:w-auto">
+                <input type="email" placeholder="Votre adresse email" required
+                       class="w-full md:w-[260px] px-4 py-3 rounded-l-md outline-none text-[#28292F]">
+                <button type="submit" class="px-5 py-3 bg-bleu rounded-r-md font-bold text-sm whitespace-nowrap transition duration-300 hover:bg-bleu-clair">
+                    Abonnez-Vous Maintenant
+                </button>
+            </form>
+        </div>
+
         <div class="w-[90%] md:w-[84%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-14 pb-12">
 
             <div class="lg:col-span-2">
@@ -445,10 +755,35 @@
                     <a href="#accueil" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Accueil</a>
                     <a href="a_propos.html" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">À propos</a>
                     <a href="nos_service.html" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Nos Services</a>
-                    <a href="#projets" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Projets</a>
+                    <a href="projet.html" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Projets</a>
                     <a href="contact.html" class="opacity-80 transition duration-300 hover:opacity-100 hover:text-[#4c9aff]">Contact</a>
                 </div>
             </div>
+
+            <!-- LIEN ADMINISTRATION -->
+          <div>
+            <h3 class="mb-5 text-xl font-bold">
+                Espace administration
+            </h3>
+
+            <div class="mb-5 h-px bg-white/20"></div>
+
+            <p class="mb-4 text-sm leading-6 text-blue-200">
+                Accès réservé à l'administration du site.
+            </p>
+
+            <a href="login.php"
+               class="inline-flex items-center gap-2 rounded-lg
+                      border border-white/20 bg-white/10
+                      px-5 py-3 text-sm font-semibold
+                      text-white transition duration-300
+                      hover:bg-sirius-blue">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Administration
+            </a>
+        </div>
 
             <div>
                 <h3 class="mb-5 font-semibold">Contact</h3>
@@ -463,10 +798,22 @@
                     Inscrivez-vous à notre newsletter
                     pour recevoir nos dernières actualités.
                 </p>
-                <form class="flex mt-5">
-                    <input type="email" placeholder="Votre adresse email" required
-                           class="flex-1 p-3.5 border-0 outline-none rounded-l-md text-[#28292F]">
-                    <button type="submit" class="px-5 py-3.5 border-0 bg-bleu text-white cursor-pointer rounded-r-md transition duration-300 hover:bg-[#1b63e5]">
+                <form action="newsletter.php" method="POST" class="flex mt-5">
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Votre adresse email"
+                        required
+                        class="flex-1 p-3.5 border-0 outline-none
+                        rounded-l-md text-[#28292F]"
+                    >
+
+                    <button
+                        type="submit"
+                        class="px-5 py-3.5 border-0 bg-[#054ACB]
+                        text-white cursor-pointer rounded-r-md
+                        transition duration-300 hover:bg-[#03035A]">
                         S'inscrire
                     </button>
                 </form>
@@ -483,7 +830,6 @@
                 <a href="#" class="w-[42px] h-[42px] flex items-center justify-center bg-bleu rounded-full transition duration-300 hover:bg-white hover:text-bleu-fonce hover:-translate-y-1"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-
         <div class="py-5 text-center border-t border-white/15">
             <p class="opacity-70 text-sm">© <span id="year"></span> Sirius Digital - Tous droits réservés</p>
         </div>
@@ -493,7 +839,7 @@
 
     <!-- Bouton retour en haut -->
     <button id="back-to-top" type="button" aria-label="Retour en haut"
-            class="fixed right-6 bottom-6 w-[50px] h-[50px] rounded-full border-0 bg-bleu text-white text-2xl font-bold cursor-pointer opacity-0 invisible transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1 z-[999]">
+            class="fixed right-4 bottom-4 sm:right-6 sm:bottom-6 w-[50px] h-[50px] flex items-center justify-center rounded-full border-0 bg-bleu text-white text-xl font-bold cursor-pointer opacity-0 invisible shadow-[0_8px_20px_rgba(3,3,90,0.25)] transition duration-300 hover:bg-bleu-fonce hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[#2878E8]/40 z-[999]">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
@@ -505,15 +851,6 @@
         // Menu mobile
         const menuToggle = document.getElementById('menu-toggle');
         const navbar = document.getElementById('main-navbar');
-
-        const servicesToggle = document.getElementById('services-toggle');
-        const servicesMenu = document.getElementById('services-menu');
-
-        servicesToggle.addEventListener('click', () => {
-            const isOpen = !servicesMenu.classList.contains('hidden');
-            servicesMenu.classList.toggle('hidden', isOpen);
-            servicesToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-        });
 
         menuToggle.addEventListener('click', () => {
             const isOpen = navbar.classList.toggle('flex');
